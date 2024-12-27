@@ -5,6 +5,8 @@
   "type": "module",
   "main": "src/index.js",
   "scripts": {
+    "dev": "rolldown -c rolldown.config.js -w",
+    "dev2": "rolldown -c -w",
     "build": "rolldown -c"
   },
   "keywords": [],
@@ -12,7 +14,16 @@
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-replace": "^6.0.2",
+    "@vitejs/plugin-vue": "^5.2.1",
     "rolldown": "1.0.0-beta.1",
-    "rollup-plugin-clear": "^2.0.7"
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-progress": "^1.1.2",
+    "rollup-plugin-serve": "^1.1.1",
+    "vite": "^6.0.6"
+  },
+  "dependencies": {
+    "vue": "^3.5.13"
   }
 }
