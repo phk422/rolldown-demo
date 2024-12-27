@@ -1,24 +1,16 @@
 import { defineConfig } from "rolldown";
+import clear from "rollup-plugin-clear";
 
 export default defineConfig([
   {
     input: 'src/index.js',
     output: {
-      format: "esm"
-    }
-  },
-  {
-    input: 'src/index.js',
-    output: {
       format: "iife",
-      dir: 'dist/iife',
-    }
-  },
-  {
-    input: 'src/index.js',
-    output: {
-      format: "cjs",
-      dir: 'dist/cjs',
-    }
+    },
+    plugins: [
+      clear({
+        targets: ['dist']
+      })
+    ]
   }
 ])
